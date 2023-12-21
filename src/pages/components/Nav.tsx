@@ -3,6 +3,9 @@ import { useState } from 'react'
 
 import { useMediaQuery } from '../../util/useMediaQuery'
 
+import avatar from '/public/avatar.png'
+
+
 const navMotion = {
 	visible: {
 		opacity: 1,
@@ -22,7 +25,6 @@ const itemMotion = {
 	hidden: { opacity: 0, x: -100 },
 }
 
-import avatar from '/public/avatar.png'
 
 export default function Nav() {
 	const [toggled, setToggled] = useState(false)
