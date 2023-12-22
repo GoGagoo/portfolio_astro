@@ -1,0 +1,55 @@
+---
+import art1 from '/public/art1.jpg'
+import art2 from '/public/art2.jpg'
+import art3 from '/public/art3.jpg'
+import art4 from '/public/art4.jpg'
+---
+
+<div class='mx-12'>
+	<h1 class='my-24 text-center text-xl'>Latest Art Pieces</h1>
+	<div class="grid grid-cols-1 gap-24 xl:mx-48 xl:grid-cols-2">
+    <div class="group relative cursor-pointer">
+      <img
+        class="relative z-10 w-full rounded-lg transition-all group-hover:-translate-x-3"
+        src={art1.src}
+        alt="painting"
+      />
+      <div
+        class="absolute left-0 top-0 h-full w-full rounded-lg bg-black transition-all group-hover:translate-x-4 group-hover:translate-y-4"
+      >
+      </div>
+    </div>
+		<div class="group relative cursor-pointer">
+      <img
+        class="relative z-10 w-full rounded-lg transition-all group-hover:-translate-x-3"
+        src={art2.src}
+        alt="painting"
+      />
+      <div
+        class="absolute left-0 top-0 h-full w-full rounded-lg bg-black transition-all group-hover:translate-x-4 group-hover:translate-y-4"
+      >
+      </div>
+    </div>
+		<div class="group relative cursor-pointer">
+      <img
+        class="relative z-10 w-full rounded-lg transition-all group-hover:-translate-x-3"
+        src={art3.src}
+        alt="painting"
+      />
+      <div
+        class="absolute left-0 top-0 h-full w-full rounded-lg bg-black transition-all group-hover:translate-x-4 group-hover:translate-y-4"
+      >
+      </div>
+    </div>
+		<div class="group relative cursor-pointer">
+      <img
+        class="relative z-10 w-full rounded-lg transition-all group-hover:-translate-x-3"
+        src={art4.src}
+        alt="painting"
+      />
+      <div
+        class="absolute left-0 top-0 h-full w-full rounded-lg bg-black transition-all group-hover:translate-x-4 group-hover:translate-y-4"
+      >
+      </div>
+    </div>
+</div>
