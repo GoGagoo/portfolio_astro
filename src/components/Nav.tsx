@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import avatar from '/public/avatar.png'
-import dribble from '/public/dribble.png'
-import twitter from '/public/twitter.png'
-import youtube from '/public/youtube.png'
+import avatar from '/avatar.png'
+import dribble from '/dribble.png'
+import twitter from '/twitter.png'
+import youtube from '/youtube.png'
 
 const navMotion = {
 	visible: {
@@ -81,18 +81,26 @@ export default function Nav() {
 				transition={{ delay: 0.35 }}
 				className='flex gap-12'
 			>
-				<img src={avatar.src} alt='Hua profile picture' />
+        <a href="/">
+				  <img src={avatar} alt='Hua profile picture' />
+        </a>
 				<motion.div className='hidden items-center gap-12 xl:flex'>
-					<img src={dribble.src} alt='Dribble Account' />
-					<img src={twitter.src} alt='Twitter Account' />
-					<img src={youtube.src} alt='Youtube Channel' />
+					<img src={dribble} alt='Dribble Account' />
+					<img src={twitter} alt='Twitter Account' />
+					<img src={youtube} alt='Youtube Channel' />
 				</motion.div>
 			</motion.div>
 			{/* Title */}
 
-			<h1 className='text-lg font-bold'>
-				<a href='/'>Hua.</a>
-			</h1>
+      <button className="group relative grid overflow-hidden rounded-full px-4 py-1 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200">
+      <span>
+        <span className="spark mask-gradient animate-flip before:animate-rotate absolute inset-0 h-[100%] w-[100%] overflow-hidden rounded-full [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] before:bg-[conic-gradient(from_0deg,transparent_0_340deg,white_360deg)] before:content-[''] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%]" />
+      </span>
+      <span className="backdrop absolute inset-[1px] rounded-full bg-black transition-colors duration-200 group-hover:bg-slate-800" />
+      <a href='/' className="text z-10 text-[#cbd5e1]">Hua.</a>
+    </button>
+
+      
 
 			{/* Nav Items animating in  */}
 			{toggled && (
@@ -100,7 +108,8 @@ export default function Nav() {
 					variants={navMotion}
 					animate='visible'
 					initial='hidden'
-					className='fixed left-0 top-0  z-40 flex h-screen w-full flex-col items-center justify-center gap-24 bg-white text-2xl font-bold'
+					className='fixed left-0 top-0  z-40 flex h-screen
+          w-full flex-col items-center  justify-center  gap-24 bg-white text-2xl font-bold'
 				>
 					<NavLinks
 						className=' flex flex-col gap-24 text-lg '
@@ -117,6 +126,7 @@ export default function Nav() {
 				<NavLinks className='flex gap-12' isMobile={false} />
 			</motion.div>
 
+			{/* Hamburger Toggle */}
 			<motion.div
 				animate={{ opacity: 1, x: 0 }}
 				initial={{ opacity: 0, x: 25 }}
